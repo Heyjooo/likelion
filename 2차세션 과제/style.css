@@ -15,8 +15,6 @@ a:link, a:visited {
 }
 
 .container {
-    width: 1500px;
-    height: 64px;
     margin: 0;
     display: flex;
 }
@@ -69,7 +67,6 @@ ul.nav-btn > li:not(:first-child) {
     margin-left: 32px;
 }
 
-
 .nav-btn2 {
     float: left;
     padding-right: 15%;
@@ -85,7 +82,32 @@ ul.nav-btn > li:not(:first-child) {
 .hd {
     position: relative;
     height: 400px;
-    text-align: center;
+    font-weight:bold;
+}
+
+.hd-title {
+    line-height: 38px;
+    margin: 0px 80px;
+    padding: 460px 24px 0px 24px;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.hd-intro {
+    margin: 0 0 0 0;
+    font-size: 1rem;
+}
+.hd-content{
+    font-size: 26px;
+}
+
+.sub-content {
+    font-size: 1rem;
+}
+
+.click-btn {
+    padding-top: 102px;
+    font-size: .875rem;
 }
 
 .hd::before{
@@ -104,6 +126,7 @@ ul.nav-btn > li:not(:first-child) {
 }
 
 .hd .container {
+    display: block;
     position: relative;
     color: white;
 }
