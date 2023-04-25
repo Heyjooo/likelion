@@ -108,6 +108,7 @@ ul.nav-btn > li:not(:first-child) {
 .click-btn {
     padding-top: 102px;
     font-size: .875rem;
+    margin-right: 15px;
 }
 
 .hd::before{
