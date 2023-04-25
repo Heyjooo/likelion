@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -197,7 +196,6 @@ ul.nav-btn > li:not(:first-child) {
     font-weight: 600;
     vertical-align: middle;
 }
-
 
 .card-dday3 {
     height: 30px;
