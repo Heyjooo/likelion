@@ -21,14 +21,14 @@
                 TODO LIST
             </h1>
 
-            <p class="mx-auto mt-2 max-w-md text-center text-gray-500">
+            <p class="mx-auto mt-1 mb-2 max-w-md text-center text-gray-500">
                 나만의 투두리스트
             </p>
             <div>
-                <label for="todo" class="text-sm font-bold">할 일을 입력하세요</label>
+                <label for="todo" class="text-m font-bold">할 일을 입력하세요</label>
 
                 <div class="relative mt-1">
-                    <input id="todo"
+                    <input type="text" id="todo"
                         class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm" />
                 </div>
             </div>
@@ -38,12 +38,15 @@
             </button>
 
             <div>
-                <label for="mylist" class="text-sm font-bold">입력한 TODO LIST</label>
+                <label for="mylist" class="text-m font-bold">입력한 TODO LIST</label>
 
-                <div class="relative mt-1" id="result">
-
+                <div>
+                    <ul class="Todolist"> 
+                        <li><div id='result'></div></li>
+                    </ul>
                 </div>
             </div>
+            
         </div>
     </div>
 

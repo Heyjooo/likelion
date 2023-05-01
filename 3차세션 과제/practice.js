@@ -4,10 +4,13 @@ let elResult = document.getElementById('result');
 
 function addList() {
 
-    let listText = el.value; 
-
-    elResult.innerText = listText;
-    return listText;
+    if (el.value == false) {
+        alert('내용을 입력하세요!');
+    } else {
+        let list = document.createElement("li");
+        list.innerHTML = '✏️ ' + el.value;
+        elResult.appendChild(list);
+    }
 }
 
 elSubmit.addEventListener('click', addList);
