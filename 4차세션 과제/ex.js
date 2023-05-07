@@ -3,23 +3,31 @@ let elSubmit = document.getElementById('submit');
 let elResult = document.getElementById('result');
 let elDelete = document.getElementById('delete');
 
+let list;
+let del;
+
 function addList() {
 
     if (el.value == false) {
         alert('내용을 입력하세요!');
     } else {
-        let list = document.createElement("div");
-        let del = document.createElement("button");
+        list = document.createElement("div");
+        del = document.createElement("button");
         
-        list.innerText = '✏️ ' + el.value + " ";
+        list.innerText = '✏️ ' + el.value;
 
         del.innerText = "[X]";         
-        del.addEventListener("click", deleteList); 
+        del.style.fontSize = "15px";
+        del.style.border = "none";
+        del.style.float = "right";
+        del.style.marginTop = "0px";
+
+        del.addEventListener('click', deleteList);
 
         list.appendChild(del);
         elResult.appendChild(list);
 
-        localStorage.setItem("data", JSON.stringify(elResult.innerText));
+        localStorage.setItem("data", JSON.stringify(elResult.innerHTML));
         
     }
 }
@@ -27,8 +35,8 @@ function addList() {
 function deleteList(e) {
     let removeOne = e.target.parentElement;
     JSON.stringify(localStorage.removeItem("data"));
-    removeOne.innerText = "";
-    localStorage.setItem("data", JSON.stringify(elResult.innerText));
+    removeOne.remove()
+    localStorage.setItem("data", JSON.stringify(elResult.innerHTML));
 
 }
 
@@ -38,6 +46,7 @@ function deleteAllList() {
 }
 
 elSubmit.addEventListener('click', addList);
-elResult.innerText = JSON.parse(localStorage.getItem("data"));
+elResult.innerHTML = JSON.parse(localStorage.getItem("data"));
+elResult.addEventListener('click', deleteList);
 elDelete.addEventListener('click', deleteAllList);
 
