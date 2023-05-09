@@ -3,16 +3,13 @@ let elSubmit = document.getElementById('submit');
 let elResult = document.getElementById('result');
 let elDelete = document.getElementById('delete');
 
-let list;
-let del;
-
 function addList() {
 
     if (el.value == false) {
         alert('내용을 입력하세요!');
     } else {
-        list = document.createElement("div");
-        del = document.createElement("button");
+        let list = document.createElement("div");
+        let del = document.createElement("button");
         
         list.innerText = '✏️ ' + el.value;
 
