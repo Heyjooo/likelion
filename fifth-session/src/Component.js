@@ -9,7 +9,7 @@ function Component(props) {
             <p>{props.date}</p>
             <p>{props.price}</p>
             </div>
-    </div>
+    </div>;
 }
 
 export default Component;
